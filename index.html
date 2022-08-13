@@ -22,21 +22,26 @@
             backgroundColor: 0x212128,
             maxDistance: 27.00
         })
-        })
 
+        setTimeout(() => {
+        const main = document.querySelector('main')
+        main.style.opacity = 1
+        main.style.filter = 'blur(0px)'
+      }, 1000)
+        })
     </script>
 </head>
 
 <body>
+    <div id="vanta"></div>
     <main>
-        <div id="vanta"></div>
         <header>
             <img src="https://pbs.twimg.com/profile_images/1476040487752527880/qjm42pYJ_400x400.jpg" alt="">
             <h1>@clanktron</h1>
         </header>
         <ul>
             <li>
-                <a href="claytonc.dev">
+                <a href="https://1.claytonc.dev">
                     <img src="./images/homepage.svg" alt="Homepage" width="20">
                     Official Website
                 </a>
