@@ -31,6 +31,9 @@ video{
 
 main{
     position: relative;
+    opacity: 0;
+    transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+    filter: blur(10px);
 }
 
 header {
