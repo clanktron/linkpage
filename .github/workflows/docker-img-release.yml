@@ -1,11 +1,8 @@
-name: Docker Image CI
+name: Publish Docker image
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+  release:
+    types: [published]
 
 jobs:
   push_to_registry:
@@ -32,4 +29,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
